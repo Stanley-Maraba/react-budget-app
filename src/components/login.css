@@ -1,0 +1,26 @@
+div#login{
+    width: 100%;
+    border-radius: 10px;
+}
+
+div#login > form {
+    border: 6px solid cyan;
+    border-radius: 12px;
+    padding: 4rem;
+    margin: 2rem 30rem;
+}
+
+h1{
+    text-align: center;
+}
+
+#login button[type="submit"] {
+    width: 50%;
+    height: 50px;
+    border-radius: 14px;
+    background-color: chartreuse;
+}
+
+#login {
+    text-align: center;
+}
