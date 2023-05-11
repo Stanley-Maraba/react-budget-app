@@ -1,16 +1,16 @@
-div#login{
+#login {
     width: 100%;
     border-radius: 10px;
 }
 
-div#login > form {
+login > form {
     border: 6px solid cyan;
     border-radius: 12px;
     padding: 4rem;
     margin: 2rem 30rem;
 }
 
-h1{
+h1 {
     text-align: center;
 }
 

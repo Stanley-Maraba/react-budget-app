@@ -1,25 +1,23 @@
 import React from "react";
-import "./login.css";
 import {NavLink} from "react-router-dom";
+import "./login.css";
+import PropTypes, {string} from "prop-types";
 
-function Login(props) {
+const Login = (props) => {
 
     return (
         <>
             <h1>Login</h1>
-
-            <div id="login">
-
+            <section id="login">
                 <form>
                     <fieldset>
-                        <label htmlFor="userName">Username</label>
-                        <div className="field" id="fields">
+                        <label htmlFor="username">Username</label>
+                        <div id="fields">
                             <input
-                                id="userName"
-                                onChange={props.onLoginChange}
+                                id="username"
+                                onChange={(event) => props.onLoginChange({username: event.target.value})}
                                 name="username"
                                 type="text"
-                                className="form-control"
                                 value={props.login.username}
                             />
                         </div>
@@ -27,13 +25,12 @@ function Login(props) {
 
                     <fieldset>
                         <label htmlFor="password">password</label>
-                        <div className="field">
+                        <div>
                             <input
                                 id="password"
-                                onChange={props.onLoginChange}
+                                onChange={(event) => props.onLoginChange({password: event.target.value})}
                                 name="password"
                                 type="text"
-                                className="form-control"
                                 value={props.login.password}
                             />
                         </div>
@@ -45,10 +42,13 @@ function Login(props) {
                     <span>not a member ?&nbsp;</span>
                     <NavLink to="/register">register</NavLink>
                 </div>
-            </div>
+            </section>
         </>
-
     )
 }
 
+Login.propTypes = {
+    username : PropTypes.string,
+    password : PropTypes.string
+}
 export default Login;

@@ -16,16 +16,16 @@ fieldset {
   border: none;
 }
 
-input{
+input {
   width: 50%;
   padding: 10px;
   border-radius: 5px;
   border: 1px solid #ccc;
   margin-bottom: 10px;
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
-button{
+button {
   width: 50%;
   height: 50px;
   border-radius: 14px;

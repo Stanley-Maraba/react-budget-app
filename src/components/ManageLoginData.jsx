@@ -1,19 +1,18 @@
 import React,{useState} from "react";
 import Login from "./Login";
 
-function ManageLoginData () {
-    const [login,setLogin] = useState({
+const ManageLoginData = () => {
+    const [loginDetails,setLoginDetails] = useState({
         username : "",
         password : "",
     });
 
-    function onLoginChange (event){
-        const updateDetails = {...login, [event.target.name]: event.target.value};
-        setLogin(updateDetails);
+    const onLoginChange = (newState) => {
+        setLoginDetails({ ...loginDetails, ...newState });
     }
 
     return (
-            <Login login={login} onLoginChange={onLoginChange} />
+            <Login login={loginDetails} onLoginChange={onLoginChange} />
     )
 }
 export default ManageLoginData;
