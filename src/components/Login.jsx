@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {NavLink} from 'react-router-dom';
 
 import Input from './Input';
@@ -7,14 +7,25 @@ import './login.css';
 
 const Login = (props) => {
 
+    const [loginDetails, setLoginDetails] = useState({
+        username: '',
+        password: ''
+    });
+
+    const onLoginChange = (newState) => {
+        setLoginDetails({...loginDetails, ...newState});
+    };
+
     return (
         <>
             <h1>Login</h1>
             <section id="login">
                 <form>
-                    <Input id={'username'} onChange={props.onLoginChange} inputVal={props.loginDetails.username}/>
-                    <Input id={'password'} onChange={props.onLoginChange} inputVal={props.loginDetails.password}/>
-                    <button type="submit">LOGIN</button>
+                    <Input id="username" onChange={onLoginChange} inputVal={loginDetails.username} label="username"
+                           type="text"/>
+                    <Input id="password" onChange={onLoginChange} inputVal={loginDetails.password} label="password"
+                           type="password"/>
+                    <button type="submit" onClick={props.submit}>LOGIN</button>
                 </form>
                 <div>
                     <span>not a member ?&nbsp;</span>
