@@ -9,7 +9,7 @@ const Input = (props) => {
                 <label htmlFor={props.id}>{props.id}</label>
                 <input
                     id={props.id}
-                    onChange={(event) => props.onLoginChanges({username: event.target.value})}
+                    onChange={(event) => props.onLoginChanges({[props.id]: event.target.value})}
                     name={props.id}
                     type="text"
                     value={props.loginDetails.id}
