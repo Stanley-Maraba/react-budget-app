@@ -1,9 +1,9 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
+import React from 'react';
+import {NavLink} from 'react-router-dom';
 
-import Input from "./Input";
+import Input from './Input';
 
-import "./login.css";
+import './login.css';
 
 const Login = (props) => {
 
@@ -12,8 +12,8 @@ const Login = (props) => {
             <h1>Login</h1>
             <section id="login">
                 <form>
-                    <Input id={"username"} onLoginChanges={props.onLoginChange} loginDetails={props.loginDetails}/>
-                    <Input id={"password"} onLoginChanges={props.onLoginChange} loginDetails={props.loginDetails}/>
+                    <Input id={'username'} onLoginChanges={props.onLoginChange} loginDetails={props.loginDetails}/>
+                    <Input id={'password'} onLoginChanges={props.onLoginChange} loginDetails={props.loginDetails}/>
                     <button type="submit">LOGIN</button>
                 </form>
                 <div>
@@ -22,6 +22,6 @@ const Login = (props) => {
                 </div>
             </section>
         </>
-    )
-}
+    );
+};
 export default Login;

@@ -1,19 +1,19 @@
-import React,{ useState } from "react";
+import React, {useState} from 'react';
 
-import Login from "./Login";
+import Login from './Login';
 
 const ManageLoginData = () => {
     const [loginDetails, setLoginDetails] = useState({
-        username : "",
-        password : "",
+        username: '',
+        password: ''
     });
 
     const onLoginChange = (newState) => {
-        setLoginDetails({ ...loginDetails, ...newState });
-    }
+        setLoginDetails({...loginDetails, ...newState});
+    };
 
     return (
-            <Login loginDetails={loginDetails} onLoginChange={onLoginChange} />
-    )
-}
+        <Login loginDetails={loginDetails} onLoginChange={onLoginChange}/>
+    );
+};
 export default ManageLoginData;
