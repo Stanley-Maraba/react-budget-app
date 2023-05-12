@@ -12,8 +12,8 @@ const Login = (props) => {
             <h1>Login</h1>
             <section id="login">
                 <form>
-                    <Input id={'username'} onLoginChanges={props.onLoginChange} loginDetails={props.loginDetails}/>
-                    <Input id={'password'} onLoginChanges={props.onLoginChange} loginDetails={props.loginDetails}/>
+                    <Input id={'username'} onChange={props.onLoginChange} inputVal={props.loginDetails.username}/>
+                    <Input id={'password'} onChange={props.onLoginChange} inputVal={props.loginDetails.password}/>
                     <button type="submit">LOGIN</button>
                 </form>
                 <div>

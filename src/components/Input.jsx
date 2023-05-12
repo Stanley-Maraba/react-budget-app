@@ -9,30 +9,23 @@ const Input = (props) => {
                 <label htmlFor={props.id}>{props.id}</label>
                 <input
                     id={props.id}
-                    onChange={(event) => props.onLoginChanges({[props.id]: event.target.value})}
+                    onChange={(event) => props.onChange({[props.id]: event.target.value})}
                     name={props.id}
                     type="text"
-                    value={props.loginDetails.id}
+                    value={props.inputVal}
                 />
             </fieldset>
         </>
+
     );
 };
 
 Input.defaultProps = {
-    loginDetails: {
-        password: '',
-        username: ''
-    },
-    onChange: () => {
-    }
+    inputVal: '',
 };
 
 Input.propTypes = {
-    loginDetails: PropTypes.shape({
-        username: PropTypes.string,
-        password: PropTypes.string
-    }),
+    inputVal: PropTypes.string,
     onChange: PropTypes.func.isRequired
 };
 export default Input;
