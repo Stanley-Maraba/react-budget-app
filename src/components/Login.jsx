@@ -44,8 +44,10 @@ const Login = (props) => {
 }
 
 Login.defaultProps = {
-    password : "",
-    username : "",
+    loginDetails : {
+        password : "",
+        username : ""
+    },
     onChange : () => {}
 }
 
