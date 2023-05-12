@@ -5,16 +5,14 @@ import { NavLink } from "react-router-dom";
 import "./login.css";
 
 const Login = (props) => {
-    console.log(props.loginDetails.username)
 
     return (
         <>
             <h1>Login</h1>
             <section id="login">
                 <form>
+                    <label htmlFor="username">Username</label>
                     <fieldset>
-                        <label htmlFor="username">Username</label>
-                        <div id="fields">
                             <input
                                 id="username"
                                 onChange={(event) => props.onLoginChange({username: event.target.value})}
@@ -22,11 +20,9 @@ const Login = (props) => {
                                 type="text"
                                 value={props.loginDetails.username}
                             />
-                        </div>
                     </fieldset>
+                    <label htmlFor="password">password</label>
                     <fieldset>
-                        <label htmlFor="password">password</label>
-                        <div>
                             <input
                                 id="password"
                                 onChange={(event) => props.onLoginChange({password: event.target.value})}
@@ -34,7 +30,6 @@ const Login = (props) => {
                                 type="text"
                                 value={props.loginDetails.password}
                             />
-                        </div>
                     </fieldset>
                     <button type="submit">LOGIN</button>
                 </form>
@@ -47,15 +42,18 @@ const Login = (props) => {
         </>
     )
 }
+
 Login.defaultProps = {
-   password : "",
-    username : ""
+    password : "",
+    username : "",
+    onChange : () => {}
 }
 
 Login.propTypes = {
     loginDetails : PropTypes.shape ({
     username : PropTypes.string,
-    password : PropTypes.string
-    })
+    password : PropTypes.string,
+    }),
+    onChange : PropTypes.func.isRequired
 }
 export default Login;
