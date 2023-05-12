@@ -1,8 +1,9 @@
-import React,{useState} from "react";
+import React,{ useState } from "react";
+
 import Login from "./Login";
 
 const ManageLoginData = () => {
-    const [loginDetails,setLoginDetails] = useState({
+    const [loginDetails, setLoginDetails] = useState({
         username : "",
         password : "",
     });
@@ -12,7 +13,7 @@ const ManageLoginData = () => {
     }
 
     return (
-            <Login login={loginDetails} onLoginChange={onLoginChange} />
+            <Login loginDetails={loginDetails} onLoginChange={onLoginChange} />
     )
 }
 export default ManageLoginData;

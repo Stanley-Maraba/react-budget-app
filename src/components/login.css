@@ -1,9 +1,10 @@
 #login {
     width: 100%;
     border-radius: 10px;
+    text-align: center;
 }
 
-login > form {
+#login > form {
     border: 6px solid cyan;
     border-radius: 12px;
     padding: 4rem;
@@ -19,8 +20,4 @@ h1 {
     height: 50px;
     border-radius: 14px;
     background-color: chartreuse;
-}
-
-#login {
-    text-align: center;
 }

@@ -1,9 +1,11 @@
 import React from "react";
-import {NavLink} from "react-router-dom";
+import PropTypes, { string } from "prop-types";
+import { NavLink } from "react-router-dom";
+
 import "./login.css";
-import PropTypes, {string} from "prop-types";
 
 const Login = (props) => {
+    console.log(props.loginDetails.username)
 
     return (
         <>
@@ -18,11 +20,10 @@ const Login = (props) => {
                                 onChange={(event) => props.onLoginChange({username: event.target.value})}
                                 name="username"
                                 type="text"
-                                value={props.login.username}
+                                value={props.loginDetails.username}
                             />
                         </div>
                     </fieldset>
-
                     <fieldset>
                         <label htmlFor="password">password</label>
                         <div>
@@ -31,11 +32,11 @@ const Login = (props) => {
                                 onChange={(event) => props.onLoginChange({password: event.target.value})}
                                 name="password"
                                 type="text"
-                                value={props.login.password}
+                                value={props.loginDetails.password}
                             />
                         </div>
                     </fieldset>
-                    <button className="btn btn-primary" type="submit">LOGIN</button>
+                    <button type="submit">LOGIN</button>
                 </form>
 
                 <div>
@@ -46,9 +47,15 @@ const Login = (props) => {
         </>
     )
 }
+Login.defaultProps = {
+   password : "",
+    username : ""
+}
 
 Login.propTypes = {
+    loginDetails : PropTypes.shape ({
     username : PropTypes.string,
     password : PropTypes.string
+    })
 }
 export default Login;
