@@ -5,6 +5,7 @@ import Header from './header/Header';
 import ManageLoginData from './ManageLoginData';
 import HomePage from './HomePage';
 import ManageRegisterData from './ManageRegisterData';
+import AuthLayout from './AuthLayout';
 
 const App = () => {
     return (
@@ -12,8 +13,8 @@ const App = () => {
             <Header/>
             <Routes>
                 <Route path="/" element={<HomePage/>}/>
-                <Route path="/login" element={<ManageLoginData/>}/>
-                <Route path="/register" element={<ManageRegisterData/>}/>
+                <Route path="/login" element={<AuthLayout isRegistration={false} name="login"/>}/>
+                <Route path="/register" element={<AuthLayout isRegistration={true} name="register"/>}/>
             </Routes>
         </>
     );
