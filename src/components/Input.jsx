@@ -9,13 +9,12 @@ const Input = (props) => {
             <label htmlFor={inputId}>{props.label}</label>
             <input
                 id={inputId}
-                onChange={(event) => props.onChange({[inputId]: event.target.value})}
+                onChange={(event) => props.onChange({ [inputId]: event.target.value })}
                 name={inputId}
                 type={props.type}
                 value={props.value}
             />
         </fieldset>
-
     );
 };
 

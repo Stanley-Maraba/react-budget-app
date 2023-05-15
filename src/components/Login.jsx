@@ -1,5 +1,5 @@
-import React, {useState} from 'react';
-import {NavLink} from 'react-router-dom';
+import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 
 import Input from './Input';
 
@@ -13,7 +13,7 @@ const Login = (props) => {
     });
 
     const onLoginChange = (newState) => {
-        setLoginDetails({...loginDetails, ...newState});
+        setLoginDetails({ ...loginDetails, ...newState });
     };
 
     return (
