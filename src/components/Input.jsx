@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 const Input = (props) => {
 
     return (
-        <>
             <fieldset>
                 <label htmlFor={props.id}>{props.label}</label>
                 <input
@@ -15,20 +14,20 @@ const Input = (props) => {
                     value={props.inputVal}
                 />
             </fieldset>
-        </>
 
     );
 };
 
 Input.defaultProps = {
-    inputVal: '',
+    value: '',
     type: 'text'
 };
 
 Input.propTypes = {
-    inputVal: PropTypes.string,
+    value: PropTypes.string,
     onChange: PropTypes.func.isRequired,
     id: PropTypes.string.isRequired,
     type: PropTypes.oneOf(['text', 'number', 'password'])
 };
+
 export default Input;

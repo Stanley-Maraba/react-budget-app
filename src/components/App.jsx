@@ -15,9 +15,9 @@ return (
                 <Route path="/" element={<HomePage/>}/>
                 <Route path="/login" element={<ManageLoginData/>}/>
                 <Route path="/register" element={<ManageRegisterData/>}/>
-                {/*<Route element={<PageNotFound/>}/>*/}
             </Routes>
     </>
     )
 };
+
 export default App;

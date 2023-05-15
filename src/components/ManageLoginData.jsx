@@ -2,10 +2,8 @@ import React, {useState} from 'react';
 
 import Login from './Login';
 
-const ManageLoginData = () => {
+const ManageLoginData = () => (
+    <Login/>
+);
 
-    return (
-        <Login/>
-    );
-};
 export default ManageLoginData;
