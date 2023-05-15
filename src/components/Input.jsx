@@ -2,18 +2,19 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Input = (props) => {
+    const inputId = props.id;
 
     return (
-            <fieldset>
-                <label htmlFor={props.id}>{props.label}</label>
-                <input
-                    id={props.id}
-                    onChange={(event) => props.onChange({[props.id]: event.target.value})}
-                    name={props.id}
-                    type={props.type}
-                    value={props.inputVal}
-                />
-            </fieldset>
+        <fieldset>
+            <label htmlFor={inputId}>{props.label}</label>
+            <input
+                id={inputId}
+                onChange={(event) => props.onChange({[inputId]: event.target.value})}
+                name={inputId}
+                type={props.type}
+                value={props.value}
+            />
+        </fieldset>
 
     );
 };
