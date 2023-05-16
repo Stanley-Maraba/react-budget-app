@@ -1,35 +1,29 @@
 import React from 'react';
-import { Form, NavLink } from 'react-router-dom';
-import PropTypes, { bool } from 'prop-types';
-
-import Register from './Register';
-import Login from './Login';
+import PropTypes from 'prop-types';
+import { NavLink } from 'react-router-dom';
 
 import './auth-layout.css';
 
-const AuthLayout = (props) => {
-    const isRegistration = props.isRegistration;
-
-    return (
-        <>
-            <h1>{props.name}</h1>
-            <section id="auth-layout">
+const AuthLayout = ({ name, children }) =>
+    (
+        <section>
+            <h1>{name}</h1>
+            <article id="auth-layout">
                 <form>
-                    {isRegistration ? <Register/> : <Login/>}
-                    <button className="btn btn-primary">{props.name}</button>
+                    {children}
+                    <button>{name}</button>
+
                 </form>
                 <div>
-                    <span>{isRegistration ? 'already' : 'not'} a member ?&nbsp;</span>
+                    <span>{name === 'register' ? 'already' : 'not'} a member ?&nbsp;</span>
                     <NavLink
-                        to={isRegistration ? '/login' : '/register'}>{isRegistration ? 'login' : 'register'}</NavLink>
+                        to={name === 'register' ? '/login' : '/register'}>{name === 'register' ? 'login' : 'register'}</NavLink>
                 </div>
-            </section>
-        </>
+            </article>
+        </section>
     );
-};
 
 AuthLayout.propTypes = {
-    isRegistration: PropTypes.bool,
     name: PropTypes.string.isRequired
 };
 
