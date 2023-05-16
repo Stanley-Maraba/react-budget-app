@@ -18,7 +18,7 @@ const AuthLayout = ({ header, linkUrl, linkText, children }) =>
     );
 
 AuthLayout.propTypes = {
-    name: PropTypes.string.isRequired,
+    header: PropTypes.string.isRequired,
     children: PropTypes.arrayOf(PropTypes.node).isRequired,
     linkUrl: PropTypes.string.isRequired,
     linkText: PropTypes.string.isRequired
