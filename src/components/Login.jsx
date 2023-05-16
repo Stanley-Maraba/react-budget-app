@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
 
 import Input from './Input';
 import AuthLayout from './AuthLayout';
 
-const Login = (props) => {
+const Login = () => {
 
     const [loginDetails, setLoginDetails] = useState({
         username: '',
@@ -16,7 +15,7 @@ const Login = (props) => {
     };
 
     return (
-        <AuthLayout name="login">
+        <AuthLayout name="login" linkUrl="/register" linkText="not a member?">
             <Input id="username" onChange={onLoginChange} value={loginDetails.username} label="username"/>
             <Input id="password" onChange={onLoginChange} value={loginDetails.password} label="password"
                    type="password"/>
