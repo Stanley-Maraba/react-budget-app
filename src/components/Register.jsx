@@ -15,7 +15,7 @@ const Register = () => {
     };
 
     return (
-        <AuthLayout name="register" linkUrl="/login" linkText="already a member ? ">
+        <AuthLayout header="register" linkUrl="/login" linkText="already a member ? ">
             <Input id="username" onChange={onRegisterChange} value={registerDetails.username} label="username"/>
             <Input id="password" onChange={onRegisterChange} value={registerDetails.password} label="password"
                    type="password"/>

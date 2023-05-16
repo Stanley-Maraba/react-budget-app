@@ -4,10 +4,10 @@ import { NavLink } from 'react-router-dom';
 
 import './auth-layout.css';
 
-const AuthLayout = ({ name, linkUrl, linkText, children }) =>
+const AuthLayout = ({ header, linkUrl, linkText, children }) =>
     (
         <section id="auth-layout">
-            <h1>{name}</h1>
+            <h1>{header}</h1>
             <form>
                 {children}
             </form>

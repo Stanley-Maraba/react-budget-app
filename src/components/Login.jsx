@@ -15,7 +15,7 @@ const Login = () => {
     };
 
     return (
-        <AuthLayout name="login" linkUrl="/register" linkText="not a member?">
+        <AuthLayout header="login" linkUrl="/register" linkText="not a member?">
             <Input id="username" onChange={onLoginChange} value={loginDetails.username} label="username"/>
             <Input id="password" onChange={onLoginChange} value={loginDetails.password} label="password"
                    type="password"/>
