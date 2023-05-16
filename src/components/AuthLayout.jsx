@@ -6,20 +6,16 @@ import './auth-layout.css';
 
 const AuthLayout = ({ name, children }) =>
     (
-        <section>
+        <section id="auth-layout">
             <h1>{name}</h1>
-            <article id="auth-layout">
-                <form>
-                    {children}
-                    <button>{name}</button>
-
-                </form>
-                <div>
-                    <span>{name === 'register' ? 'already' : 'not'} a member ?&nbsp;</span>
-                    <NavLink
-                        to={name === 'register' ? '/login' : '/register'}>{name === 'register' ? 'login' : 'register'}</NavLink>
-                </div>
-            </article>
+            <form>
+                {children}
+            </form>
+            <div>
+                <span>{name === 'register' ? 'already' : 'not'} a member ?&nbsp;</span>
+                <NavLink
+                    to={name === 'register' ? '/login' : '/register'}>{name === 'register' ? 'login' : 'register'}</NavLink>
+            </div>
         </section>
     );
 

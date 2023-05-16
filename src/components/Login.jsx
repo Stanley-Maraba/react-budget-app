@@ -16,10 +16,11 @@ const Login = (props) => {
     };
 
     return (
-        <AuthLayout name='login'>
+        <AuthLayout name="login">
             <Input id="username" onChange={onLoginChange} value={loginDetails.username} label="username"/>
             <Input id="password" onChange={onLoginChange} value={loginDetails.password} label="password"
                    type="password"/>
+            <button>Login</button>
         </AuthLayout>
     );
 };

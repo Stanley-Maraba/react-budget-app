@@ -15,11 +15,11 @@ const Register = () => {
     };
 
     return (
-        <AuthLayout name='register'>
+        <AuthLayout name="register">
             <Input id="username" onChange={onRegisterChange} value={registerDetails.username} label="username"/>
-            <Input id="income" onChange={onRegisterChange} value={registerDetails.income} label="income"/>
             <Input id="password" onChange={onRegisterChange} value={registerDetails.password} label="password"
                    type="password"/>
+            <button>Register</button>
         </AuthLayout>
     );
 };
