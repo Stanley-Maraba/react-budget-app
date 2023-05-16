@@ -1,10 +1,10 @@
 import React from 'react';
-import { Route, Router, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 
 import Header from './header/Header';
-import ManageLoginData from './ManageLoginData';
 import HomePage from './HomePage';
-import ManageRegisterData from './ManageRegisterData';
+import Login from './Login';
+import Register from './Register';
 
 const App = () => {
     return (
@@ -12,8 +12,8 @@ const App = () => {
             <Header/>
             <Routes>
                 <Route path="/" element={<HomePage/>}/>
-                <Route path="/login" element={<ManageLoginData/>}/>
-                <Route path="/register" element={<ManageRegisterData/>}/>
+                <Route path="/login" element={<Login/>} />
+                <Route path="/register" element={<Register/>}/>
             </Routes>
         </>
     );
