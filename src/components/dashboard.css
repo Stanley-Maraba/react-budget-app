@@ -1,20 +1,20 @@
-#expense-table > div:first-of-type,
-#expense-table > div:last-of-type{
+#finance-table > div:first-of-type,
+#finance-table > div:last-of-type {
     display: flex;
     flex-direction: column;
     width: 80%;
 }
 
-#expense-table > div > div{
+#finance-table > div > div {
     display: flex;
     flex-direction: row;
 }
 
-#expense-table > div > div:first-child{
+#finance-table > div > div:first-child {
     background-color: #f2f2f2;
 }
 
-#expense-table div div:nth-child(n) {
+#finance-table div div:nth-child(n) {
     padding: 20px;
     flex-basis: 35%;
 }

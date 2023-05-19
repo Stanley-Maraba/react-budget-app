@@ -6,6 +6,12 @@ import './dashboard.css';
 
 const Expenses = () => {
 
+    // to do when connecting the api
+    const [expensesDetails] = useState({
+        name: 'food',
+        amount: '6000'
+    });
+
     const [expenseDetails, setExpenseDetails] = useState({
         name: '',
         amount: ''
@@ -18,7 +24,7 @@ const Expenses = () => {
     return (
         <>
             <h1>EXPENSE DASHBOARD</h1>
-            <section id="expense-table">
+            <section id="finance-table">
                 <h2>ADDING MY EXPENSES</h2>
                 <div>
                     <div>
@@ -47,10 +53,10 @@ const Expenses = () => {
                     </div>
                     <div className="table-row">
                         <div>
-                            manginya
+                            {expensesDetails.name}
                         </div>
                         <div>
-                            30000
+                            {expensesDetails.amount}
                         </div>
                         <div>
                             <button>DELETE</button>

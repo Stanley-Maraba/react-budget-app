@@ -17,12 +17,12 @@ const App = () => {
             <Header/>
             <Routes>
                 <Route path="/" element={<HomePage/>}/>
-                <Route path="/login" element={<Login/>} />
+                <Route path="/login" element={<Login/>}/>
                 <Route path="/register" element={<Register/>}/>
                 <Route path="/expenses" element={<Expenses/>}/>
                 <Route path="/income" element={<Income/>}/>
                 <Route path="/finance" element={<Finance/>}/>
-                <Route path="*"element={<PageNotFound/>}/>
+                <Route path="*" element={<PageNotFound/>}/>
             </Routes>
         </>
     );

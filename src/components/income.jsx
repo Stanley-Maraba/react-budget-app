@@ -5,6 +5,11 @@ import Input from './Input';
 import './dashboard.css';
 
 const Income = () => {
+    // {to do when connecting the api}
+    const [incomesDetails] = useState({
+        name: 'ubereats',
+        amount: '5000'
+    });
 
     const [incomeDetails, setIncomeDetails] = useState({
         name: '',
@@ -18,7 +23,7 @@ const Income = () => {
     return (
         <>
             <h1>INCOME DASHBOARD</h1>
-            <section id="expense-table">
+            <section id="finance-table">
                 <h2>ADDING MY INCOME</h2>
                 <div>
                     <div>
@@ -47,10 +52,11 @@ const Income = () => {
                     </div>
                     <div className="table-row">
                         <div>
-                            manginya
+                            {/*{ to do when connecting the api}*/}
+                            {incomesDetails.name}
                         </div>
                         <div>
-                            30000
+                            {incomesDetails.amount}
                         </div>
                         <div>
                             <button>DELETE</button>
