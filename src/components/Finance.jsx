@@ -9,7 +9,7 @@ const Finance = () => {
     return (
         <>
             <h1>BUDGET DASHBOARD</h1>
-            <section id="expense-table">
+            <section id="finance-table">
                 <div>
                     <div>
                         <div>Total Income</div>
@@ -19,7 +19,7 @@ const Finance = () => {
 
                     <div>
                         <div>
-                            R4000
+                            R10000
                         </div>
                         <div>
                             R6000
