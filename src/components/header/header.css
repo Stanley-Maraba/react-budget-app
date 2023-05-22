@@ -1,24 +1,21 @@
-#header .btn {
+#header button {
     width: 10%;
     height: 50px;
     border: none;
     font-size: 16px;
 }
 
-#chart {
-    float: right;
-
-}
-
-nav {
+#header nav {
     background-color: cyan;
     padding: 15px;
 }
 
-#header .btn:hover {
-    background-color: #e65100;
+#header button:hover {
+    background-color: blue;
 }
 
-#header > nav:first-of-type {
-
+#header nav a {
+    text-decoration: none;
+    margin-right: 20px;
+    padding: 5px;
 }

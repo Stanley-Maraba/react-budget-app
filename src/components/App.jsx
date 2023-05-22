@@ -8,7 +8,7 @@ import Register from './Register';
 import PageNotFound from './PageNotFound';
 import Dashboard from './dashboard';
 import Expenses from './Expenses';
-import Income from './income';
+import Income from './Income';
 import Finance from './Finance';
 
 const App = () => {

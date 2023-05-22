@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 import Input from './Input';
 import AuthLayout from './AuthLayout';
+import Button from './Button';
 
 const Register = () => {
     const [registerDetails, setRegisterDetails] = useState({
@@ -19,7 +20,7 @@ const Register = () => {
             <Input id="username" onChange={onRegisterChange} value={registerDetails.username} label="username"/>
             <Input id="password" onChange={onRegisterChange} value={registerDetails.password} label="password"
                    type="password"/>
-            <button>Register</button>
+            <Button name="REGISTER"/>
         </AuthLayout>
     );
 };

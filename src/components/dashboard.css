@@ -14,7 +14,8 @@
     background-color: #f2f2f2;
 }
 
-#finance-table div div:nth-child(n) {
+#finance-table div > div span:nth-child(n),
+#finance-table div > div:nth-child(n) {
     padding: 20px;
-    flex-basis: 35%;
+    flex-basis: 28%;
 }

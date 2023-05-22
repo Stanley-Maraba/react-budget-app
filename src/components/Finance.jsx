@@ -7,30 +7,22 @@ import './dashboard.css';
 const Finance = () => {
 
     return (
-        <>
+        <section id="finance-table">
             <h1>BUDGET DASHBOARD</h1>
-            <section id="expense-table">
+            <div>
                 <div>
-                    <div>
-                        <div>Total Income</div>
-                        <div>Total Expenses</div>
-                        <div>What you left with</div>
-                    </div>
-
-                    <div>
-                        <div>
-                            R4000
-                        </div>
-                        <div>
-                            R6000
-                        </div>
-                        <div>
-                            R4000
-                        </div>
-                    </div>
+                    <span>Total Income</span>
+                    <span>Total Expenses</span>
+                    <span>What you left with</span>
                 </div>
-            </section>
-        </>
+
+                <div>
+                    <span>R4000</span>
+                    <span>R6000</span>
+                    <span>R4000</span>
+                </div>
+            </div>
+        </section>
     );
 };
 

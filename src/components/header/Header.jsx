@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 
+import Button from '../Button';
+
 import './header.css';
 
 function Header() {
@@ -11,18 +13,16 @@ function Header() {
         <section id="header">
             <nav>
                 <div>
-                    <NavLink to="/">Home</NavLink> {' '}
-                    <NavLink to="/income">Income</NavLink> {' '}
-                    <NavLink to="/expenses">Expenses</NavLink> {' '}
-                    <NavLink to="/chart">Chart</NavLink> {' '}
+                    <NavLink to="/">Home</NavLink>
+                    <NavLink to="/income">Income</NavLink>
+                    <NavLink to="/expenses">Expenses</NavLink>
+                    <NavLink to="/chart">Chart</NavLink>
                     <NavLink to="/login">
-                        <button className="btn btn-primary">log-in</button>
+                        <Button name="log-in"/>
                     </NavLink>
-                    {' '}
-                    <NavLink to="/register" className="navbar-right">
-                        <button className="btn btn-primary">Register</button>
+                    <NavLink to="/register">
+                        <Button name="Register"/>
                     </NavLink>
-                    {' '}
                 </div>
             </nav>
         </section>
