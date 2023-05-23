@@ -1,4 +1,4 @@
-#header .btn {
+header .btn {
     text-align: center;
     width: 6%;
     height: 30px;
@@ -8,16 +8,16 @@
     display: inline-block;
 }
 
-#header nav {
+header nav {
     background-color: cyan;
     padding: 15px;
 }
 
-#header .btn:hover {
+header .btn:hover {
     background-color: dodgerblue;
 }
 
-#header nav a {
+header nav a {
     text-decoration: none;
     margin-right: 20px;
     padding: 5px;

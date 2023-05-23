@@ -10,7 +10,7 @@ function Header() {
     const [userName, setUserName] = useState('');
 
     return (
-        <header id="header">
+        <header>
             <nav>
                 <NavLink to="/">Home</NavLink>
                 <NavLink to="/income">Income</NavLink>
