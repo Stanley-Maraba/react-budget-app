@@ -39,7 +39,7 @@ const Income = () => {
                         <Input id="amount" onChange={onExpenseChange} value={incomeDetails.amount} type="number"/>
                     </div>
                     <div>
-                    <Button name="Add"/>
+                        <Button name="Add"/>
                     </div>
                 </div>
             </div>
