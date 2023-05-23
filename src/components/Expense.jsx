@@ -3,9 +3,9 @@ import React, { useState } from 'react';
 import Input from './Input';
 import Button from './Button';
 
-import './dashboard.css';
+import './expense.css';
 
-const Expenses = () => {
+const Expense = () => {
 
     // to do when connecting the api
     const [expensesDetails] = useState({
@@ -23,8 +23,8 @@ const Expenses = () => {
     };
 
     return (
-        <section id="finance-table">
-            <h1>EXPENSE DASHBOARD</h1>
+        <section id="expense-table">
+            <h1>EXPENSE PAGE</h1>
             <h2>ADDING MY EXPENSES</h2>
             <div>
                 <div>
@@ -40,7 +40,7 @@ const Expenses = () => {
                         <Input id="amount" onChange={onExpenseChange} value={expenseDetails.amount} type="number"/>
                     </div>
                     <div>
-                        <Button name="ADD"/>
+                        <Button name="Add"/>
                     </div>
                 </div>
             </div>
@@ -54,13 +54,13 @@ const Expenses = () => {
                 <div>
                     <span>{expensesDetails.name}</span>
                     <span>{expensesDetails.amount}</span>
-                    <span>
-                        <Button name="DELETE"/>
-                    </span>
+                    <div>
+                        <Button name="Delete"/>
+                    </div>
                 </div>
             </div>
         </section>
     );
 };
 
-export default Expenses;
+export default Expense;

@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import Input from './Input';
 import Button from './Button';
 
-import './dashboard.css';
+import './income.css';
 
 const Income = () => {
     // {to do when connecting the api}
@@ -22,8 +22,8 @@ const Income = () => {
     };
 
     return (
-        <section id="finance-table">
-            <h1>INCOME DASHBOARD</h1>
+        <section id="income-table">
+            <h1>INCOME PAGE</h1>
             <h2>ADDING MY INCOME</h2>
             <div>
                 <div>
@@ -38,9 +38,9 @@ const Income = () => {
                     <div>
                         <Input id="amount" onChange={onExpenseChange} value={incomeDetails.amount} type="number"/>
                     </div>
-                    <span>
-                    <Button name="ADD"/>
-                    </span>
+                    <div>
+                    <Button name="Add"/>
+                    </div>
                 </div>
             </div>
 
@@ -54,9 +54,9 @@ const Income = () => {
                     {/*{ to do when connecting the api}*/}
                     <span>{incomesDetails.name}</span>
                     <span>{incomesDetails.amount}</span>
-                    <span>
-                        <Button name="DELETE"/>
-                    </span>
+                    <div>
+                        <Button name="Delete"/>
+                    </div>
                 </div>
             </div>
         </section>

@@ -10,23 +10,16 @@ function Header() {
     const [userName, setUserName] = useState('');
 
     return (
-        <section id="header">
+        <header id="header">
             <nav>
-                <div>
-                    <NavLink to="/">Home</NavLink>
-                    <NavLink to="/income">Income</NavLink>
-                    <NavLink to="/expenses">Expenses</NavLink>
-                    <NavLink to="/chart">Chart</NavLink>
-                    <NavLink to="/login">
-                        <Button name="log-in"/>
-                    </NavLink>
-                    <NavLink to="/register">
-                        <Button name="Register"/>
-                    </NavLink>
-                </div>
+                <NavLink to="/">Home</NavLink>
+                <NavLink to="/income">Income</NavLink>
+                <NavLink to="/expenses">Expenses</NavLink>
+                <NavLink to="/dashboard">Dashboard</NavLink>
+                <NavLink to="/login" className="btn">Log-in</NavLink>
+                <NavLink to="/register" className="btn">Register</NavLink>
             </nav>
-        </section>
-
+        </header>
     );
 }
 

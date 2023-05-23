@@ -1,13 +1,11 @@
 import React, { useState } from 'react';
 
-import Input from './Input';
-
 import './dashboard.css';
 
-const Finance = () => {
+const Dashboard = () => {
 
     return (
-        <section id="finance-table">
+        <section id="dashboard-table">
             <h1>BUDGET DASHBOARD</h1>
             <div>
                 <div>
@@ -26,4 +24,4 @@ const Finance = () => {
     );
 };
 
-export default Finance;
+export default Dashboard;

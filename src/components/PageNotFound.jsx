@@ -6,7 +6,7 @@ const PageNotFound = () => {
 
     return (
         <section id="page">
-            <h2>This page is not found</h2>
+            <h1>This page is not found</h1>
         </section>
     );
 };
