@@ -51,7 +51,6 @@ const Income = () => {
                     <span>Amount</span>
                 </div>
                 <div>
-                    {/*{ to do when connecting the api}*/}
                     <span>{incomesDetails.name}</span>
                     <span>{incomesDetails.amount}</span>
                     <div>
