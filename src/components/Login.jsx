@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 import Input from './Input';
 import AuthLayout from './AuthLayout';
+import Button from './Button';
 
 const Login = () => {
 
@@ -19,7 +20,7 @@ const Login = () => {
             <Input id="username" onChange={onLoginChange} value={loginDetails.username} label="username"/>
             <Input id="password" onChange={onLoginChange} value={loginDetails.password} label="password"
                    type="password"/>
-            <button>Login</button>
+            <Button name ='Login'/>
         </AuthLayout>
     );
 };

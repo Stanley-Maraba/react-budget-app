@@ -1,0 +1,24 @@
+header .btn {
+    text-align: center;
+    width: 6%;
+    height: 30px;
+    background-color: chartreuse;
+    padding: 10px 20px;
+    border-radius: 15px;
+    display: inline-block;
+}
+
+header nav {
+    background-color: cyan;
+    padding: 15px;
+}
+
+header .btn:hover {
+    background-color: dodgerblue;
+}
+
+header nav a {
+    text-decoration: none;
+    margin-right: 20px;
+    padding: 5px;
+}

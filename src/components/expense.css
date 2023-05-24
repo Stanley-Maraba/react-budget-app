@@ -1,0 +1,21 @@
+#expense > div:first-of-type,
+#expense > div:last-of-type {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+
+#expense > div > div {
+    display: flex;
+    flex-direction: row;
+}
+
+#expense > div > div:first-child {
+    background-color: #f2f2f2;
+}
+
+#expense div > div span,
+#expense div > div {
+    padding: 20px;
+    flex-basis: 28%;
+}

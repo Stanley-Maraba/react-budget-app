@@ -1,0 +1,22 @@
+#income > div:first-of-type,
+#income > div:last-of-type {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+
+#income > div > div {
+    display: flex;
+    flex-direction: row;
+}
+
+#income > div > div:first-child {
+    background-color: #f2f2f2;
+}
+
+
+#income div > div span,
+#income div > div {
+    padding: 20px;
+    flex-basis: 28%;
+}
