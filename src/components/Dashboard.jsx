@@ -5,7 +5,7 @@ import './dashboard.css';
 const Dashboard = () => {
 
     return (
-        <section id="dashboard-table">
+        <section id="dashboard">
             <h1>BUDGET DASHBOARD</h1>
             <div>
                 <div>

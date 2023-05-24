@@ -22,7 +22,7 @@ const Income = () => {
     };
 
     return (
-        <section id="income-table">
+        <section id="income">
             <h1>INCOME PAGE</h1>
             <h2>ADDING MY INCOME</h2>
             <div>

@@ -23,7 +23,7 @@ const Expense = () => {
     };
 
     return (
-        <section id="expense-table">
+        <section id="expense">
             <h1>EXPENSE PAGE</h1>
             <h2>ADDING MY EXPENSES</h2>
             <div>

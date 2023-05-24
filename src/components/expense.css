@@ -1,22 +1,21 @@
-#expense-table > div:first-of-type,
-#expense-table > div:last-of-type {
+#expense > div:first-of-type,
+#expense > div:last-of-type {
     display: flex;
     flex-direction: column;
     width: 80%;
 }
 
-#expense-table > div > div {
+#expense > div > div {
     display: flex;
     flex-direction: row;
 }
 
-#expense-table > div > div:first-child {
+#expense > div > div:first-child {
     background-color: #f2f2f2;
 }
 
-#expense-table div > div span:nth-child(1),
-#expense-table div > div span:nth-child(2),
-#expense-table div > div {
+#expense div > div span,
+#expense div > div {
     padding: 20px;
     flex-basis: 28%;
 }

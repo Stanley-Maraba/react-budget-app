@@ -1,22 +1,21 @@
-#dashboard-table > div:first-of-type,
-#dashboard-table > div:last-of-type {
+#dashboard > div:first-of-type,
+#dashboard > div:last-of-type {
     display: flex;
     flex-direction: column;
     width: 80%;
 }
 
-#dashboard-table > div > div {
+#dashboard > div > div {
     display: flex;
     flex-direction: row;
 }
 
-#dashboard-table > div > div:first-child {
+#dashboard > div > div:first-child {
     background-color: #f2f2f2;
 }
 
-#dashboard-table div > div span:nth-child(1),
-#dashboard-table div > div span:nth-child(2),
-#dashboard-table div > div {
+#dashboard div > div span,
+#dashboard div > div {
     padding: 20px;
     flex-basis: 28%;
 }
