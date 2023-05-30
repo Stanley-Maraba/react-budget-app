@@ -1,5 +1,6 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 import Header from './header/Header';
 import HomePage from './HomePage';
@@ -11,17 +12,25 @@ import Expense from './Expense';
 import Income from './Income';
 
 const App = () => {
+    const user = useSelector((state) => state.user.user);
     return (
         <>
             <Header/>
             <Routes>
-                <Route path="/" element={<HomePage/>}/>
-                <Route path="/login" element={<Login/>}/>
-                <Route path="/register" element={<Register/>}/>
-                <Route path="/expenses" element={<Expense/>}/>
-                <Route path="/income" element={<Income/>}/>
-                <Route path="/dashboard" element={<Dashboard/>}/>
-                <Route path="*" element={<PageNotFound/>}/>
+                {user ?
+                    <>
+                        <Route path="/expenses" element={<Expense/>}/>
+                        <Route path="/income" element={<Income/>}/>
+                        <Route path="/dashboard" element={<Dashboard/>}/>
+                        <Route path="*" element={<PageNotFound/>}/>
+                        <Route path="/" element={<HomePage/>}/>
+                    </>
+                    :
+                    <>
+                        <Route path="/login" element={<Login/>}/>
+                        <Route path="/register" element={<Register/>}/>
+                    </>
+                }
             </Routes>
         </>
     );
