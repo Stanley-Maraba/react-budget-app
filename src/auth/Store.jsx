@@ -1,17 +1,18 @@
-    import { combineReducers, createStore, applyMiddleware } from 'redux';
-    import {userReducer} from './User';
-    import createSagaMiddleware from 'redux-saga';
-    import { watcherSaga } from '../sagas/RootSaga';
-    import { composeWithDevTools } from 'redux-devtools-extension';
+import createSagaMiddleware from 'redux-saga';
+import { combineReducers, createStore, applyMiddleware } from 'redux';
+import { composeWithDevTools } from 'redux-devtools-extension';
 
-    const reducer = combineReducers({
-        user: userReducer
-    });
+import { userReducer } from './auth.actions';
+import { watcherSaga } from '../sagas/handler/user-saga';
 
-    const sagaMiddleware = createSagaMiddleware();
+const reducer = combineReducers({
+    user: userReducer
+});
 
-    const store = createStore(reducer, composeWithDevTools(applyMiddleware(sagaMiddleware)));
+const sagaMiddleware = createSagaMiddleware();
 
-    sagaMiddleware.run(watcherSaga);
+const store = createStore(reducer, composeWithDevTools(applyMiddleware(sagaMiddleware)));
 
-    export default store;
+sagaMiddleware.run(watcherSaga);
+
+export default store;

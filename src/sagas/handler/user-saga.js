@@ -1,13 +1,10 @@
-import { call, put } from 'redux-saga/effects';
+import { call, put, takeLatest } from 'redux-saga/effects';
 
 import { requestGetUser } from '../requests/User';
-import { setUser } from '../../auth/User';
+import { GET_USER, setUser } from '../../auth/auth.actions';
 
 export function* handleGetUser(action) {
     try {
-        if (!action.payload) {
-            throw new Error('Payload is undefined');
-        }
         const { payload: details } = action;
         const { navigate } = action;
 
@@ -18,4 +15,8 @@ export function* handleGetUser(action) {
     } catch (error) {
         alert(error);
     }
+}
+
+export function* watcherSaga() {
+    yield takeLatest(GET_USER, handleGetUser);
 }

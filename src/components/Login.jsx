@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { getUser } from '../auth/User.jsx';
+import { getUser } from '../auth/auth.actions.js';
 import { useNavigate } from 'react-router-dom';
 
 import Input from './Input';
@@ -30,7 +30,7 @@ const Login = () => {
             <Input id="username" onChange={onLoginChange} value={loginDetails.username} label="username"/>
             <Input id="password" onChange={onLoginChange} value={loginDetails.password} label="password"
                    type="password"/>
-            <Button name="Login" onClick={handleClick}/>
+            <Button name="Login" type='button' onClick={handleClick}/>
         </AuthLayout>
     );
 };
