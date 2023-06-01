@@ -1,15 +1,15 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
 import './header.css';
 
 function Header() {
-    const user = useSelector((state) => state.user.user);
+    const user = useSelector((state) => state.user_store.user);
     return (
         <header>
             <nav>
-                <NavLink to="/">Home</NavLink>
+                <NavLink to="/home">Home</NavLink>
                 {user ?
                     <><NavLink to="/income">Income</NavLink>
                         <NavLink to="/expenses">Expenses</NavLink>

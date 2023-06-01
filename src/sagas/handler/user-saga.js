@@ -5,10 +5,10 @@ import { GET_USER, setUser } from '../../auth/auth.actions';
 
 export function* handleGetUser(action) {
     try {
-        const { payload: details } = action;
+        const { payload } = action;
         const { navigate } = action;
 
-        const response = yield call(requestGetUser, details);
+        const response = yield call(requestGetUser, payload);
         const { data } = response;
         yield put(setUser(data));
         yield call(navigate, '/dashboard');
