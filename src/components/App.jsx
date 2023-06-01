@@ -11,6 +11,8 @@ import Expense from './Expense';
 import Income from './Income';
 import AuthRoute from '../auth/AuthRoute';
 
+import './app.css';
+
 const App = () => {
     return (
         <>

@@ -14,6 +14,7 @@ Button.defaultProps = {
 
 Button.propTypes = {
     name: PropTypes.string.isRequired,
-    type: PropTypes.oneOf(['button', 'submit']).isRequired
+    type: PropTypes.oneOf(['button', 'submit']),
+    onClick: PropTypes.func.isRequired
 };
 export default Button;

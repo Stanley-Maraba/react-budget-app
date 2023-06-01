@@ -3,7 +3,7 @@ import { call, put, takeLatest } from 'redux-saga/effects';
 import { requestGetUser } from '../requests/User';
 import { GET_USER, setUser } from '../../auth/auth.actions';
 
-export function* handleGetUser(action) {
+export function* handleAuthentication(action) {
     try {
         const { payload } = action;
         const { navigate } = action;
@@ -18,5 +18,5 @@ export function* handleGetUser(action) {
 }
 
 export function* watcherSaga() {
-    yield takeLatest(GET_USER, handleGetUser);
+    yield takeLatest(GET_USER, handleAuthentication);
 }

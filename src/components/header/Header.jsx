@@ -11,13 +11,17 @@ function Header() {
             <nav>
                 <NavLink to="/home">Home</NavLink>
                 {user ?
-                    <><NavLink to="/income">Income</NavLink>
+                    <>
+                        <NavLink to="/income">Income</NavLink>
                         <NavLink to="/expenses">Expenses</NavLink>
                         <NavLink to="/dashboard">Dashboard</NavLink>
-                        <span>welcome back {user.username}</span></>
+                        <span>welcome back {user.username}</span>
+                    </>
                     :
-                    <><NavLink to="/login" className="btn">Log-in</NavLink>
-                        <NavLink to="/register" className="btn">Register</NavLink></>
+                    <>
+                        <NavLink to="/login" className="btn">Log-in</NavLink>
+                        <NavLink to="/register" className="btn">Register</NavLink>
+                    </>
                 }
             </nav>
         </header>

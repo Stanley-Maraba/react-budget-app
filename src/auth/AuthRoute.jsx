@@ -7,7 +7,7 @@ const AuthRoute = () => {
     const user = useSelector((state) => state.user_store.user);
 
     return (
-        user ? <Outlet/> : <Login/>
+            user ? <Outlet/> : <Login/>
     );
 };
 
