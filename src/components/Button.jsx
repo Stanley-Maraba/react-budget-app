@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Input from './Input';
 
 const Button = (props) => {
 
@@ -15,6 +14,6 @@ Button.defaultProps = {
 
 Button.propTypes = {
     name: PropTypes.string.isRequired,
-    type: PropTypes.oneOf(['button','submit']).isRequired
+    type: PropTypes.oneOf(['button', 'submit']).isRequired
 };
 export default Button;
